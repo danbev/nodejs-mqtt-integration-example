@@ -1,0 +1,7 @@
+{
+  "drogue.application.name": "<drogue_cloud_app_name>",
+  "drogue.api.user": "<drogue_cloud_username>",
+  "drogue.api.token": "<drogue_cloud_api_token>",
+  "drogue.integration.mqtt.host": "mqtts://mqtt-integration.sandbox.drogue.cloud",
+  "drogue.integration.mqtt.port": 443
+}

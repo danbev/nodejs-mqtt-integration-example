@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-mqtt-integration-example",
+  "version": "1.0.0",
+  "description": "Node.js MQTT Integration Example",
+  "main": "index.js",
+  "homepage": "https://github.com/drogue-iot",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start-debug": "env DEBUG='mqttjs*' node index.js"
+  },
+  "keywords": [
+    "mqtt",
+    "node.js"
+  ],
+  "author": "daniel.bevenius@gmail.com",
+  "license": "SEE LICENSE IN LICENCE",
+  "dependencies": {
+    "mqtt": "^4.3.7"
+  }
+}
