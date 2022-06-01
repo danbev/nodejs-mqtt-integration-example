@@ -3,8 +3,8 @@
 [![CI](https://github.com/drogue-iot/nodejss-mqtt-integration-example/workflows/CI/badge.svg)](https://github.com/drogue-iot/nodejs-mqtt-integration-example/actions?query=workflow%3A%22CI%22)
 [![Matrix](https://img.shields.io/matrix/drogue-iot:matrix.org)](https://matrix.to/#/#drogue-iot:matrix.org)
 
-This is an example of using the MQTT integration of [Drogue IoT](drogue) in
-combination with [Node.js](nodejs) to implement the backend service for the
+This is an example of using the MQTT integration of [Drogue IoT][drogue] in
+combination with [Node.js][nodejs] to implement the backend service for the
 [LoRaWAN end-to-end][workshop] workshop. It follows the orignal Quarkus backend
 implementation as closly as possible.
 
