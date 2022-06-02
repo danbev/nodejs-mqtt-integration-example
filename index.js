@@ -1,38 +1,10 @@
-import { connect } from 'mqtt';
-import config from './config.json' assert { type: 'json' };
+import processor from './lib/processor.js';
+import server from './lib/server.js';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import path from 'path';
 
-const host = config['drogue.integration.mqtt.host'];
-const port = config['drogue.integration.mqtt.port'];
-const subTopic = `app/${config['drogue.application.name']}`;
-const pubTopic = `app/${config['drogue.application.name']}`;
+processor.start();
 
-const options = {
-  clientId: 'mqttjs_' + Math.random().toString(8).substr(2, 4),
-  username: config['drogue.api.user'],
-  password: config['drogue.api.token'],
-  port: config["drogue.integration.mqtt.port"],
-};
-
-const client = connect(host, options);
-
-client.on('connect', () => {
-  console.log(`Connected to ${host}`);
-
-  client.subscribe(subTopic, (err) => {
-    if (err) {
-      console.error(`subscribe failed: ${err}`);
-      client.end();
-      process.exit(0);
-    }
-  })
-});
-
-client.on('message', (topic, message) => {
-  console.log('message is: ' + message);
-  console.log('topic is: ' + topic);
-});
-
-client.on('error', (error) => {
-  console.log(`Unable to connect: ${error}`);
-  process.exit(1);
-});
+const dir = path.join(dirname(fileURLToPath(import.meta.url)), 'static');
+server.serveStatic(8080, '0.0.0.0', dir);
