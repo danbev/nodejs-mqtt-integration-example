@@ -6,8 +6,8 @@
   "homepage": "https://github.com/drogue-iot",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "start-debug": "env DEBUG='mqttjs*' node index.js"
+    "start": "node --no-warnings index.js",
+    "start-debug": "env DEBUG='mqttjs*' node --no-warnings index.js"
   },
   "keywords": [
     "mqtt",

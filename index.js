@@ -27,12 +27,12 @@ client.on('connect', () => {
   })
 });
 
-client.on('error', (error) => {
-    console.log(`Unable to connect: ${error}`);
-    process.exit(1);
+client.on('message', (topic, message) => {
+  console.log('message is: ' + message);
+  console.log('topic is: ' + topic);
 });
 
-client.on('message', (topic, message) => {
-    console.log('message is: ' + message);
-    console.log('topic is: ' + topic);
+client.on('error', (error) => {
+  console.log(`Unable to connect: ${error}`);
+  process.exit(1);
 });
