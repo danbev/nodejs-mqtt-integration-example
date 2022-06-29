@@ -59,12 +59,12 @@ more a new token can be created using:
 $ curl -vs -H "Authorization: Bearer $(drg whoami --token)" -XPOST https://api.sandbox.drogue.cloud/api/tokens/v1alpha1 | jq
 ```
 
-### Building the example
+### Building
 ```console
 $ npm install
 ```
 
-### Running the example
+### Running
 ```console
 $ npm start
 
