@@ -4,7 +4,6 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-processor.start();
-
 const dir = path.join(dirname(fileURLToPath(import.meta.url)), 'static');
-server.serveStatic(8080, '0.0.0.0', dir);
+const s = server.init(8080, '0.0.0.0', dir);
+processor.start(s);

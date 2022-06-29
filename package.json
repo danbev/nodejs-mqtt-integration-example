@@ -18,6 +18,8 @@
   "dependencies": {
     "@fastify/static": "^5.0.2",
     "fastify": "^3.29.0",
+    "fastify-cors": "^6.1.0",
+    "fastify-sse": "^1.0.0",
     "mqtt": "^4.3.7"
   }
 }
