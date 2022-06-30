@@ -1,4 +1,4 @@
-import mqtt from './lib/mqtt-server.js';
+import mqtt from './lib/mqtt-client.js';
 import httpserver from './lib/http-server.js';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
