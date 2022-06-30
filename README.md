@@ -86,7 +86,7 @@ to Drogue IoT Cloud.
 Once you press the blue button on the board, you should see an incoming message,
 and with that, an outgoing message too.
 
-![UI with message received image](./img/ui_message.png "Example of UI without messages received")
+![UI with message received image](./img/ui_message.png "Example of UI with message received")
 
 
 ### Enabling MQTT debugging
