@@ -75,31 +75,19 @@ Server listening on http://0.0.0.0:8080
 Connected to mqtts://mqtt-integration.sandbox.drogue.cloud
 ```
 
-Next, press the blue button on the device which will send an uplink message
-to Drogue IoT Cloud. You should see something like the following in the
-terminal:
-```console
-device: danbev-ttn-device-1
-payload: ping:8
-recieveTopic is: app/danbev-ttn-app-1
-<Buffer 70 6f 6e 67>
-sendTopic is: command/danbev-ttn-app-1/danbev-ttn-device-1/port:1
-response payload:  <Buffer 70 6f 6e 67>
-```
+Open `http://0.0.0.0:8080` in a web browser and you will be presented with
+web user interface which should look something like this:
 
-And in the device console you should see something like:
-```console
-INFO  Ticked: 8
-└─ drogue_lorawan_app::{impl#2}::tick @ /home/danielbevenius/work/drougue/drogue-device/examples/apps/lorawan/src/lib.rs:135
-INFO  Sending message...
-└─ drogue_lorawan_app::{impl#2}::send::{async_fn#0} @ /home/danielbevenius/work/drougue/drogue-device/examples/apps/lorawan/src/lib.rs:139
-INFO  Message: ping:8
-└─ drogue_lorawan_app::{impl#2}::send::{async_fn#0} @ /home/danielbevenius/work/drougue/drogue-device/examples/apps/lorawan/src/lib.rs:144
-INFO  Message sent!
-└─ drogue_lorawan_app::{impl#2}::send::{async_fn#0} @ /home/danielbevenius/work/drougue/drogue-device/examples/apps/lorawan/src/lib.rs:152
-INFO  Received 4 bytes from uplink:
-pong
-```
+![UI start image](./img/ui_blank.png "Example of UI without any messages sent")
+
+Next, press the blue button on the device which will send an uplink message
+to Drogue IoT Cloud.
+
+Once you press the blue button on the board, you should see an incoming message,
+and with that, an outgoing message too.
+
+![UI with message received image](./img/ui_message.png "Example of UI without messages received")
+
 
 ### Enabling MQTT debugging
 ```console
