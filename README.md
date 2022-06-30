@@ -5,8 +5,7 @@
 
 This is an example of using the MQTT integration of [Drogue IoT][drogue] in
 combination with [Node.js][nodejs] to implement the backend service for the
-[LoRaWAN end-to-end][workshop] workshop. It follows the orignal Quarkus backend
-implementation as closly as possible.
+[LoRaWAN end-to-end][workshop] workshop.
 
 ## What does it do?
 
@@ -16,19 +15,19 @@ Drogue IoT Cloud.
 
 It will parse messages and extract [TTN][ttn] (The Things Network) uplink
 messages from that stream. When a TTN uplink message is received for port 1 and
-with the payload `ping`, then it will respond with the current active response
-command.
+with the payload is `ping`, then it will respond with the current active
+response command.
 
 The response will be sent back to the device using a downlink message.
 
-NOTE: A downlink message will only be sent shortly after the uplink message was
+***NOTE***: A downlink message will only be sent shortly after the uplink message was
 received, as this is when the device expects it. Setting a new response command
 will not send a new downlink message.
 
 When you send `led:on` to the device, the blue LED should turn on. When you send
 `led:off`, it should turn off again.
 
-NOTE: There is a short time window, between the device sending and receiving. It
+***NOTE***: There is a short time window, between the device sending and receiving. It
 may happen that the downlink command takes a bit too long, and so it is
  delivered the next time the device connects.
 
