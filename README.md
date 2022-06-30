@@ -74,8 +74,8 @@ Server listening on http://0.0.0.0:8080
 Connected to mqtts://mqtt-integration.sandbox.drogue.cloud
 ```
 
-Open http://0.0.0.0:8080 in a web browser and you will be presented with
-web user interface which should look something like this:
+Open http://0.0.0.0:8080 in a browser and you will be presented with a user
+interface which should look something like this:
 
 ![UI start image](./img/ui_blank.png "Example of UI without any messages sent")
 
