@@ -247,11 +247,13 @@
         document.getElementById("timestamp").innerText = obj.timestamp;
         document.getElementById("payload").innerText = obj.payload;
     };
+
     const response_events = new EventSource("/events/response");
     response_events.onmessage = function (event) {
         console.log("SEE: ", event);
         document.getElementById("response").innerText = event.data;
     };
+
     const command_events = new EventSource("/events/commands");
     command_events.onmessage = function (event) {
         console.log("SEE: ", event);
