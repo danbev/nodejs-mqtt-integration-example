@@ -18,8 +18,7 @@ spec:
     spec:
       containers:
         - name: service
-          #image: ghcr.io/drogue-iot/nodejs-mqtt-integration-example-native:latest
-          image: docker.io/dbevenius/nodejs-mqtt-example
+          image: ghcr.io/drogue-iot/nodejs-mqtt-integration-example-native:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

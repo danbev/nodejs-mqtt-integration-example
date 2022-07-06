@@ -39,6 +39,14 @@ $ kubectl apply -f  020-deployment.yaml
 deployment.apps/nodejs-mqtt-integration-example created
 ```
 
+Update the image to a different one, for example if you have made changes and
+would like to try them out. This requires that you have built, tagged, and
+published the image to some repository like Docker or Github packages:
+
+```console
+$ kubectl patch deployment nodejs-mqtt-integration-example --type='json' -p '[{"op":"replace","path":"/spec/template/spec/containers/0/image","value":"docker.io/dbevenius/nodejs-mqtt-example"}]'
+```
+
 ### Deploy/apply the Service
 ```console
 $ kubectl apply -f  030-service.yaml 
