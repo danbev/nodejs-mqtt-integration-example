@@ -6,8 +6,10 @@
   "homepage": "https://github.com/drogue-iot",
   "type": "module",
   "scripts": {
-    "start": "node --no-warnings index.js",
-    "start-debug": "env DEBUG='mqttjs*' node --no-warnings index.js"
+    "start": "node --no-warnings --experimental-json-modules index.js",
+    "start-debug": "env DEBUG='mqttjs*' node --no-warnings --experimental-json-modules index.js",
+    "build-image": "docker build -t nodejs-mqtt-example -f Dockerfile .",
+    "run-image": "docker run -i -p 8080:8080 -t nodejs-mqtt-example"
   },
   "keywords": [
     "mqtt",

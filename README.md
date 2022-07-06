@@ -96,6 +96,20 @@ and with that, an outgoing message too.
 $ npm run start-debug
 ```
 
+### Deploying to Kubernetes
+This example can be deployed to a Kubernetes cluster. The following instructions
+require Docker to be installed.
+
+### Building an image
+```console
+$ npm run build-image
+```
+
+### Running the image locally
+```console
+$ npm run run-image
+```
+
 [drogue]: https://drogue.io
 [nodejs]: https://nodejs.org/en
 [ttn]: https://www.thethingsnetwork.org/
