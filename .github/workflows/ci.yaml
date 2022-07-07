@@ -41,5 +41,5 @@ jobs:
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
 
-          docker tag ${IMAGE_NAME}-${i} ${IMAGE_ID}-${i}:$VERSION
-          docker push ${IMAGE_ID}-${i}:$VERSION
+          docker tag ${IMAGE_NAME} ${IMAGE_ID}:$VERSION
+          docker push ${IMAGE_ID}:$VERSION
