@@ -238,7 +238,10 @@
 </body>
 
 <script>
-    const device_events = new EventSource("/events/stream");
+    const options = {
+        withCredentials: true
+    };
+    const device_events = new EventSource("/events/stream", options);
     device_events.onmessage = function (event) {
         console.log("SEE: ", event);
         const obj = JSON.parse(event.data);
@@ -248,13 +251,13 @@
         document.getElementById("payload").innerText = obj.payload;
     };
 
-    const response_events = new EventSource("/events/response");
+    const response_events = new EventSource("/events/response", options);
     response_events.onmessage = function (event) {
         console.log("SEE: ", event);
         document.getElementById("response").innerText = event.data;
     };
 
-    const command_events = new EventSource("/events/commands");
+    const command_events = new EventSource("/events/commands", options);
     command_events.onmessage = function (event) {
         console.log("SEE: ", event);
         const obj = JSON.parse(event.data);
