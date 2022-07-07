@@ -44,7 +44,7 @@ would like to try them out. This requires that you have built, tagged, and
 published the image to some repository like Docker or Github packages:
 
 ```console
-$ kubectl patch deployment nodejs-mqtt-integration-example --type='json' -p '[{"op":"replace","path":"/spec/template/spec/containers/0/image","value":"docker.io/dbevenius/nodejs-mqtt-example"}]'
+$ kubectl patch deployment nodejs-mqtt-integration-example --type='json' -p '[{"op":"replace","path":"/spec/template/spec/containers/0/image","value":"docker.io/dbevenius/nodejs-mqtt-example:latest"}]'
 ```
 
 ### Deploy/apply the Service
